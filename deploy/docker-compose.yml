@@ -1,0 +1,16 @@
+services:
+  clientcare-portal:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "3206:3206"
+    environment:
+      - RACK_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3206/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

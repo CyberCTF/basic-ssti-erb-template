@@ -1,0 +1,39 @@
+{
+  "name": "basic-ssti-erb-template",
+  "title": "SocialConnect - SSTI Vulnerability Lab",
+  "description": "A realistic social media application demonstrating Server-Side Template Injection (SSTI) vulnerabilities in Ruby ERB templates within a user profile customization context.",
+  "element_to_proof": "Reading of /etc/passwd content via SSTI",
+  "final_flag_info": "System password file containing user account information and system access details",
+  "walkthrough": "1. Access SocialConnect at /profile 2. Identify the SSTI vulnerability in the profile customization functionality 3. Craft an ERB payload to read system files 4. Exploit the vulnerability to read /etc/passwd 5. Verify successful system file content retrieval as proof of code execution",
+  "technology_stack": [
+    "Ruby 3.2+",
+    "Sinatra Framework",
+    "ERB Template Engine",
+    "TailwindCSS",
+    "Docker",
+    "Puma Server"
+  ],
+  "vulnerability_type": "Server-Side Template Injection (SSTI)",
+  "difficulty": "Beginner to Intermediate",
+  "estimated_time": "15-30 minutes",
+  "prerequisites": [
+    "Basic understanding of web applications",
+    "Familiarity with template engines",
+    "Knowledge of Ruby/ERB syntax",
+    "Understanding of SSTI vulnerabilities"
+  ],
+  "learning_objectives": [
+    "Understand how SSTI vulnerabilities occur in ERB templates",
+    "Learn to identify unsafe template evaluation patterns",
+    "Practice crafting ERB payloads for code execution",
+    "Experience real-world vulnerability exploitation in a business context"
+  ],
+  "business_context": "Social media platform for user profile customization with dynamic placeholders",
+  "target_audience": "Security professionals, developers, and students learning about web application security",
+  "deployment": {
+    "port": 3206,
+    "protocol": "HTTP",
+    "container": "Docker",
+    "startup_command": "docker compose -f deploy/docker-compose.yml up --build"
+  }
+}

@@ -1,0 +1,5 @@
+CONFIDENTIAL - SUPPORT OPERATIONS
+Escalation Level 1: On-call Manager: alice.m@company.local
+Escalation Level 2: Regional Director: bob.s@company.local
+Escalation Level 3: COO Direct Contact - DO NOT SHARE
+Phone: +1-202-555-0147
