@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy Gemfile and install dependencies
-COPY ../build/Gemfile ./
+COPY build/Gemfile ./
 RUN bundle install
 
 # Copy application files
-COPY ../build/ ./
+COPY build/ ./
 
 # Create data directory and ensure sensitive file exists
 RUN mkdir -p data && \
